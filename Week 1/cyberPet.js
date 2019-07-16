@@ -68,10 +68,21 @@ class rabbit extends cyberPet {
         this._thirst = this.thirst - 10
         this._happiness = this._happiness + 10
     }
+    // carrotsFunc(){
+    //     if (enjoys == true){
+    //         alert(`it doesnt supprise me that ${petName} enjoys carrots, all rabbits enjoy carrots!!`)
+    //     }
+    //     else if (enjoys == false) {
+    //          alert(`What?! ${petName} doesn't like carrots!?`)
+
+    // }
+    //     else {
+    //         alert(`What?! ${petName} doesn't like carrots!?`)
+    // }}
 }
 
 class dog extends cyberPet {
-    constructor (name, _lovesBonese){
+    constructor (name, _lovesBones){
         super(name)
         this._lovesBones = _lovesBones;
     }
@@ -102,6 +113,7 @@ class cat extends cyberPet {
         this._happiness = this._happiness + 10
 
     }
+    
 }
 
 const foods = () => {
@@ -156,6 +168,7 @@ const createPet = () => {
     // move next line to a seperate function??? 
     enjoys = prompt(`Does ${petName} enjoy carrots? \n true \n false`)
     console.log(enjoys)
+    // carrotsFunc()
     pet1 = new rabbit(petName, enjoys, foodTypes)
     }
     else if (userInput == 2 || userInput == 'Dog'){
