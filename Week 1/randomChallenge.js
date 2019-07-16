@@ -12,3 +12,14 @@ if((priceOfFlower * numberOfFlowers).toFixed(2) ==  7.44) {
 else {
 	console.log("transaction failed");
 }
+
+
+let add = (a, fn) => {
+	c = (a * fn)
+	console.log(c)
+  }
+  let minus = ()=> {
+	return 22 - 7
+  }
+  console.log(add(9, minus())
+  
