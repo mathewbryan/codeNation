@@ -19,27 +19,27 @@ simpleLoop(simpleFunc)
 
 // console.log(newArray)
 
-// // challenge 3
+// challenge 3
 
-// const multiply = (a,b) =>{
-//     return a*b
-// }
-// const add = (a,b) => {
-//     return a + b
-// }
-// const divide = (a,b) => {
-//     return a/b
-// }
-// const subract = (a,b) => {
-//     return a - b
-// }
+const multiply = (a,b) =>{
+    return a*b
+}
+const add = (a,b) => {
+    return a + b
+}
+const divide = (a,b) => {
+    return a/b
+}
+const subract = (a,b) => {
+    return a - b
+}
 // const doMath = (num1) => {
 //     return a-b
 // }
 
-// const doMath = (num1) => {
-//     return (num1, fn) => {
-//         return fn(num1, num2)
-//     }
-// }
-// doMath(3)
+const doMath = (num1) => {
+    return (num1, fn) => {
+        return fn(num1, num2)
+    }
+}
+doMath(3)
