@@ -3,7 +3,7 @@ let petName;
 let foodTypes;
 let enjoys;
 
-class cyberPet {
+class CyberPet {
     constructor (name) {
     this._name = name;
     this._hunger = 75;
@@ -81,7 +81,7 @@ class rabbit extends cyberPet {
     // }}
 }
 
-class dog extends cyberPet {
+class dog extends CyberPet {
     constructor (name, _lovesBones){
         super(name)
         this._lovesBones = _lovesBones;
@@ -98,7 +98,7 @@ class dog extends cyberPet {
     }
 }
 
-class cat extends cyberPet {
+class cat extends CyberPet {
     constructor (name, _lovesCatNip){
         super(name)
         this._lovesCatNip = _lovesCatNip;
@@ -163,7 +163,7 @@ const createPet = () => {
     console.log(userInput)
     namePet()
     foods()
-    if (userInput == 1 || userInput == 'Rabbit'){
+    if (userInput == 1 || userInput.toLowerCase == 'Rabbit'){
     alert(`Your pet is a Rabbit called ${petName} who really enjoys eating ${foodTypes}`)
     // move next line to a seperate function??? 
     enjoys = prompt(`Does ${petName} enjoy carrots? \n true \n false`)
@@ -171,11 +171,11 @@ const createPet = () => {
     // carrotsFunc()
     pet1 = new rabbit(petName, enjoys, foodTypes)
     }
-    else if (userInput == 2 || userInput == 'Dog'){
+    else if (userInput == 2 || userInput.toLowerCase == 'Dog'){
     alert(`Your pet is a Dog called ${petName} who really enjoys eating ${foodTypes}`)
     pet1 = new dog(petName, true, foodTypes)
 }
-    else if (userInput == 3 || userInput == 'Cat'){
+    else if (userInput == 3 || userInput.toLowerCase == 'Cat'){
     alert(`Your pet is a Cat called ${petName} who really enjoys eating ${foodTypes}`)
     pet1 = new cat(petName, true, foodTypes)
     }
