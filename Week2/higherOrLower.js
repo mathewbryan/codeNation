@@ -4,22 +4,17 @@ let currentCard;
 let userInput; 
 let numCorrect = 0; 
 let newCard; 
-// let deck = [
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-// ]
+let ace = 1
 
 let deck = [
-    [1, 'Spades'] , [2, 'Spades'] , [3, 'Spades'], [4, 'Spades'] , [5, 'Spades'],  [6, 'Spades'], [7, 'Spades'],
-    [8, 'Spades'], [9, 'Spades'], [10, 'Spades'], [11, 'Spades'], [12, 'Spades'], [13, 'Spades'],
-    [1, 'Diamands'] , [2, 'Diamands'] , [3, 'Diamands'], [4, 'Diamands'] , [5, 'Diamands'],  [6, 'Diamands'], [7, 'Diamands'],
-    [8, 'Diamands'], [9, 'Diamands'], [10, 'Diamands'], [11, 'Diamands'], [12, 'Diamands'], [13, 'Diamands'],
-    [1, 'Clubs'] , [2, 'Clubs'] , [3, 'Clubs'], [4, 'Clubs'] , [5, 'Clubs'],  [6, 'Clubs'], [7, 'Clubs'],
-    [8, 'Clubs'], [9, 'Clubs'], [10, 'Clubs'], [11, 'Clubs'], [12, 'Clubs'], [13, 'Clubs'],
-    [1, 'Hearts'] , [2, 'Hearts'] , [3, 'Hearts'], [4, 'Hearts'] , [5, 'Hearts'],  [6, 'Hearts'], [7, 'Hearts'],
-    [8, 'Hearts'], [9, 'Hearts'], [10, 'Hearts'], [11, 'Hearts'], [12, 'Hearts'], [13, 'Hearts'],
+    [ace, 'Spades'] , [2, 'Spades'] , [3, 'Spades'], [4, 'Spades'] , [5, 'Spades'],  [6, 'Spades'], [7, 'Spades'],
+    [8, 'Spades'], [9, 'Spades'], [10, 'Spades'], [10, 'Spades'], [10, 'Spades'], [10, 'Spades'],
+    [ace, 'Diamands'] , [2, 'Diamands'] , [3, 'Diamands'], [4, 'Diamands'] , [5, 'Diamands'],  [6, 'Diamands'], [7, 'Diamands'],
+    [8, 'Diamands'], [9, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'],
+    [ace, 'Clubs'] , [2, 'Clubs'] , [3, 'Clubs'], [4, 'Clubs'] , [5, 'Clubs'],  [6, 'Clubs'], [7, 'Clubs'],
+    [8, 'Clubs'], [9, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'],
+    [ace, 'Hearts'] , [2, 'Hearts'] , [3, 'Hearts'], [4, 'Hearts'] , [5, 'Hearts'],  [6, 'Hearts'], [7, 'Hearts'],
+    [8, 'Hearts'], [9, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'],
 ]
 
 class Player {
@@ -45,7 +40,7 @@ get currentCard(){
 const scoreCalc = () =>{
     numCorrect += 1
     alert(`You managed to get through ${numCorrect} rounds`)
-
+    // playAgain()
 }
 
 // used to start the game  
@@ -117,17 +112,31 @@ const currentCardFunc = () => {
 const firstCard = () => {
     currentCard = deck[Math.floor(Math.random()* deck.length)]
     currentCard[0]
+    startGame()
 }    
 
 // removes chosen card from the deck array
 const removeCard = () => { 
 removeIndex = deck.indexOf(currentCard)
 console.log(deck.indexOf(currentCard))
-delete deck[removeIndex]
+// delete deck[removeIndex]
+deck.splice(removeIndex, 1) 
 console.log(deck)
 currentCardFunc()
 }
 
+// starts a new game or quits the program
+const playAgain = () => {
+    userInput = prompt(`Would you like to play again ${cardPlayer.name}? \n 1. Play Again \n 2. Leave`)
+    if (userInput == 1) {
+        firstCard()
+    }
+    else if (userInput == 2) {
+    }
+    else {
+        alert(`Please enter a valid choice`)
+    }
+}
 
+// use first card to pick a random then startGame runs through a new game 
 firstCard()
-startGame()
