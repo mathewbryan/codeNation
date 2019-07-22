@@ -82,9 +82,9 @@ class rabbit extends cyberPet {
 }
 
 class dog extends CyberPet {
-    constructor (name, _lovesBones){
+    constructor (name, lovesBones){
         super(name)
-        this._lovesBones = _lovesBones;
+        this._lovesBones = lovesBones;
     }
     get lovesBones(){
         return this.lovesBones
@@ -93,15 +93,15 @@ class dog extends CyberPet {
         alert(`${this._name} enjoys their walk, and uses some energy`)
         this._hunger = this.hunger - 10
         this._thirst = this.thirst - 10
-        this._happiness = this._happiness + 10
+        this._happiness = this.happiness + 10
 
     }
 }
 
 class cat extends CyberPet {
-    constructor (name, _lovesCatNip){
+    constructor (name, lovesCatNip){
         super(name)
-        this._lovesCatNip = _lovesCatNip;
+        this._lovesCatNip = lovesCatNip;
     }
     get lovesCatNip(){
         return this.lovesCatNip
@@ -124,31 +124,30 @@ const foods = () => {
 
 const namePet = () => {
     petName = prompt('What would you like to call your pet?')
-    return petName
-    console.log(petName) 
+    return petName 
 }
 const options = () => {
     userInput = prompt(`What would you like to do with your pet ${pet1.name}  \n  1. Feed \n 2. Play \n 3. Give water \n 4. Ignore \n 5. Quit`)
     console.log(userInput)
-    if (userInput == 1 || userInput == 'Feed'){
+    if (userInput == 1 || userInput.toLowerCase == 'feed'){
     pet1.eat()
     // alert(`${pet1.name} started eating, their hunger level is now ${pet1.hunger}%`)
     options()
     }
-    else if (userInput == 2 || userInput == 'Play') {
+    else if (userInput == 2 || userInput.toLowerCase == 'play') {
     pet1.play()
         alert(`${pet1.name}'s happiness level is now ${pet1.happiness} but there hunger is now ${pet1.hunger} and their thirst is ${pet1.thirst} as they have used some energy`)
     options()
     }
-    else if (userInput == 3 || userInput == 'Give water') {
+    else if (userInput == 3 || userInput.toLowerCase == 'give water') {
         pet1.drink()
         options()
     }
-    else if (userInput == 4 || userInput == 'Ignore'){
+    else if (userInput == 4 || userInput.toLowerCase == 'ignore'){
         pet1.ignore()
         options()}
 
-    else if (userInput == 5 || userInput == 'Quit'){
+    else if (userInput == 5 || userInput.toLowerCase == 'quit'){
         
     }
     else{
@@ -163,7 +162,7 @@ const createPet = () => {
     console.log(userInput)
     namePet()
     foods()
-    if (userInput == 1 || userInput.toLowerCase == 'Rabbit'){
+    if (userInput == 1 || userInput.toLowerCase == 'rabbit'){
     alert(`Your pet is a Rabbit called ${petName} who really enjoys eating ${foodTypes}`)
     // move next line to a seperate function??? 
     enjoys = prompt(`Does ${petName} enjoy carrots? \n true \n false`)
@@ -171,11 +170,11 @@ const createPet = () => {
     // carrotsFunc()
     pet1 = new rabbit(petName, enjoys, foodTypes)
     }
-    else if (userInput == 2 || userInput.toLowerCase == 'Dog'){
+    else if (userInput == 2 || userInput.toLowerCase == 'dog'){
     alert(`Your pet is a Dog called ${petName} who really enjoys eating ${foodTypes}`)
     pet1 = new dog(petName, true, foodTypes)
 }
-    else if (userInput == 3 || userInput.toLowerCase == 'Cat'){
+    else if (userInput == 3 || userInput.toLowerCase == 'cat'){
     alert(`Your pet is a Cat called ${petName} who really enjoys eating ${foodTypes}`)
     pet1 = new cat(petName, true, foodTypes)
     }

@@ -4,16 +4,15 @@ let currentCard;
 let userInput; 
 let numCorrect = 0; 
 let newCard; 
-let ace = 1
 
 let deck = [
-    [ace, 'Spades'] , [2, 'Spades'] , [3, 'Spades'], [4, 'Spades'] , [5, 'Spades'],  [6, 'Spades'], [7, 'Spades'],
+    [1, 'Spades'] , [2, 'Spades'] , [3, 'Spades'], [4, 'Spades'] , [5, 'Spades'],  [6, 'Spades'], [7, 'Spades'],
     [8, 'Spades'], [9, 'Spades'], [10, 'Spades'], [10, 'Spades'], [10, 'Spades'], [10, 'Spades'],
-    [ace, 'Diamands'] , [2, 'Diamands'] , [3, 'Diamands'], [4, 'Diamands'] , [5, 'Diamands'],  [6, 'Diamands'], [7, 'Diamands'],
+    [1, 'Diamands'] , [2, 'Diamands'] , [3, 'Diamands'], [4, 'Diamands'] , [5, 'Diamands'],  [6, 'Diamands'], [7, 'Diamands'],
     [8, 'Diamands'], [9, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'], [10, 'Diamands'],
-    [ace, 'Clubs'] , [2, 'Clubs'] , [3, 'Clubs'], [4, 'Clubs'] , [5, 'Clubs'],  [6, 'Clubs'], [7, 'Clubs'],
+    [1, 'Clubs'] , [2, 'Clubs'] , [3, 'Clubs'], [4, 'Clubs'] , [5, 'Clubs'],  [6, 'Clubs'], [7, 'Clubs'],
     [8, 'Clubs'], [9, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'], [10, 'Clubs'],
-    [ace, 'Hearts'] , [2, 'Hearts'] , [3, 'Hearts'], [4, 'Hearts'] , [5, 'Hearts'],  [6, 'Hearts'], [7, 'Hearts'],
+    [1, 'Hearts'] , [2, 'Hearts'] , [3, 'Hearts'], [4, 'Hearts'] , [5, 'Hearts'],  [6, 'Hearts'], [7, 'Hearts'],
     [8, 'Hearts'], [9, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'], [10, 'Hearts'],
 ]
 
@@ -107,7 +106,7 @@ const currentCardFunc = () => {
     }      
 }
 
-
+// should this be combined in to draw card 
 // assigns random card from deck to be the players first card
 const firstCard = () => {
     currentCard = deck[Math.floor(Math.random()* deck.length)]
@@ -125,18 +124,18 @@ console.log(deck)
 currentCardFunc()
 }
 
-// starts a new game or quits the program
-const playAgain = () => {
-    userInput = prompt(`Would you like to play again ${cardPlayer.name}? \n 1. Play Again \n 2. Leave`)
-    if (userInput == 1) {
-        firstCard()
-    }
-    else if (userInput == 2) {
-    }
-    else {
-        alert(`Please enter a valid choice`)
-    }
-}
+// // starts a new game or quits the program
+// const playAgain = () => {
+//     userInput = prompt(`Would you like to play again ${cardPlayer.name}? \n 1. Play Again \n 2. Leave`)
+//     if (userInput == 1) {
+//         firstCard()
+//     }
+//     else if (userInput == 2) {
+//     }
+//     else {
+//         alert(`Please enter a valid choice`)
+//     }
+// }
 
 // use first card to pick a random then startGame runs through a new game 
 firstCard()
