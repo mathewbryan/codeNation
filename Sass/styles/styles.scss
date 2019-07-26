@@ -1,0 +1,7 @@
+@mixin back {
+    background-color: red
+}
+
+body{
+    @include back()
+}

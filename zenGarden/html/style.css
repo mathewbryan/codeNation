@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+#css-zen-garden {
+}
+
+h2 {
+    background: url(zen.svg);
+    background-position-x: 42%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: Satisfy;
+    font-size: 20px;
+    opacity: .75;
+    padding-left: 4%;
+    
+}
+
+h1 {
+    margin: 40px;
+    padding-top: 80px;
+    font-size: 45px;
+    text-shadow:4px 4px 2px black;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px; 
+    color: #5b5b5c;
+    text-align: left;
+    /* padding-bottom: 10px; */
+    padding-top: 10px;
+    margin:0
+}
+
+
+
+
+#zen-intro {
+    background: url(huntington.png);
+    background-size: cover;
+    height: 250px;
+    font-family: 'Roboto Mono', monospace; 
+    text-align: center;
+    color: white;
+}
+
+#zen-preamble {
+    padding: 0px;
+    text-align: left;
+}
+.preamble{
+    color:#5b5b5c;
+    text-align: left;
+
+
+}
+
+.page-wrapper {
+
+}
+
+#zen-summary {
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    color: #5b5b5c;
+    /* padding-bottom: 20%; */
+    padding-top:30px;
+    text-align: left;
+
+}
+
+.explanation{
+    padding-top: 15px;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    color: #5b5b5c;
+}
+
+#zen-explanation{
+    padding-top: 200px;
+}
+.participation{
+    background: url(bamboo.png);
+    background-size: cover;
+    background-color: #77a868;
+    color: white;
+    margin:0;
+} 
+p.participation {
+    margin: 0px;
+}
+.benefits{
+    background: url(bamboo.png);
+    background-color: #77a868;
+    color: white;
+    margin: 0px;
+} 
+h3.benefits{
+    margin: 0px;
+}
